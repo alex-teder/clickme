@@ -1,16 +1,4 @@
-function randomPercent() {
-  return `${Math.floor(Math.random() * 75) + 5}%`;
-}
-
-function randomHex() {
-  return Math.floor(128 + Math.random() * 128).toString(16);
-}
-
-async function pause(milliseconds: number) {
-  return new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), milliseconds);
-  });
-}
+import { randomPositionPercent, randomHex, pause } from "./utils";
 
 class MyButton extends HTMLButtonElement {
   constructor() {
@@ -35,8 +23,8 @@ class MyButton extends HTMLButtonElement {
   async move() {
     this.disappear();
     this.randomizeColor();
-    this.style.top = randomPercent();
-    this.style.left = randomPercent();
+    this.style.top = randomPositionPercent();
+    this.style.left = randomPositionPercent();
     await pause(200);
     this.reappear();
   }
