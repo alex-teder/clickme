@@ -64,6 +64,7 @@ body::after {
   border-radius: 10px;
   font-size: 1.5rem;
   cursor: pointer;
+  color: inherit;
 
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.29);
   -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.29);
